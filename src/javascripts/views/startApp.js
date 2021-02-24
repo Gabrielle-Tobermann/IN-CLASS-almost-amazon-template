@@ -4,7 +4,6 @@ import domBuilder from '../components/domBuilder';
 import navBar from '../components/navBar';
 import domEvents from '../events/domEvents';
 import navigationEvents from '../events/navigationEvents';
-import getAuthors from '../helpers/data/authorData';
 import getBooks from '../helpers/data/bookData';
 
 const startApp = () => {

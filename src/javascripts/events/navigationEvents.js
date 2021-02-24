@@ -1,4 +1,6 @@
+import { showAuthors } from '../components/authors';
 import signOut from '../helpers/auth/signOut';
+import getAuthors from '../helpers/data/authorData';
 
 // navigation events
 const navigationEvents = () => {
@@ -32,7 +34,7 @@ const navigationEvents = () => {
   });
 
   document.querySelector('#authors').addEventListener('click', () => {
-    console.warn('authors');
+    getAuthors().then((authors) => showAuthors(authors));
   });
 
   // FIXME: STUDENTS Create an event listener for the Authors
