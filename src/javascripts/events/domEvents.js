@@ -1,4 +1,5 @@
 import { showBooks } from '../components/books';
+import addAuthorForm from '../components/forms/addAuthorForm';
 import addBookForm from '../components/forms/addBookForm';
 import { createBooks } from '../helpers/data/bookData';
 
@@ -44,6 +45,10 @@ const domEvents = () => {
 
     // ADD CLICK EVENT FOR DELETING AN AUTHOR
     // ADD CLICK EVENT FOR SHOWING FORM FOR ADDING AN AUTHOR
+    if (e.target.id.includes('add-author-btn')) {
+      console.warn('CLICKED ADD AN AUTHOR', e.target.id);
+      addAuthorForm();
+    }
     // ADD CLICK EVENT FOR SUBMITTING FORM FOR ADDING AN AUTHOR
     // ADD CLICK EVENT FOR EDITING AN AUTHOR
   });
