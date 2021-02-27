@@ -16,6 +16,13 @@ const getAuthors = () => new Promise((resolve, reject) => {
 });
 // DELETE AUTHOR
 // CREATE AUTHOR
+const createAuthors = (authorObject) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/authors.json`, authorObject)
+    .then((response) => {
+
+    })
+})
+
 // UPDATE AUTHOR
 // SEARCH AUTHORS
 export default getAuthors;

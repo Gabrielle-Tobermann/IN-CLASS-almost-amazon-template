@@ -50,6 +50,15 @@ const domEvents = () => {
       addAuthorForm();
     }
     // ADD CLICK EVENT FOR SUBMITTING FORM FOR ADDING AN AUTHOR
+    if (e.target.id.includes('submit-author')) {
+      const authorObject = {
+        email: document.querySelector('#author-email').value,
+        firebaseKey: '',
+        first_name: document.querySelector('#first-name').value,
+        last_name: document.querySelector('#last-name').value
+      }
+      console.warn(authorObject);
+    }
     // ADD CLICK EVENT FOR EDITING AN AUTHOR
   });
 };
